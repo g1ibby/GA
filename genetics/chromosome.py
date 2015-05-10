@@ -7,6 +7,7 @@ def generate_class_chromosome(type, len, l=0, r=9):
 
             type = 'number'
             genes = []
+            score = 0
             length = len
             left_range = l
             right_range = r
@@ -15,7 +16,7 @@ def generate_class_chromosome(type, len, l=0, r=9):
                 self.genes = genes
 
             def __str__(self):
-                return ' '.join(str(x) for x in self.genes)
+                return ' '.join(str(x) for x in self.genes) + ' | ' + str(self.score)
 
         return NumberChromosome
 
@@ -24,6 +25,7 @@ def generate_class_chromosome(type, len, l=0, r=9):
 
             type = 'binary'
             genes = []
+            score = 0
             length = len
             left_range = 0
             right_range = 1
@@ -41,6 +43,7 @@ def generate_class_chromosome(type, len, l=0, r=9):
 
             type = 'char'
             genes = []
+            score = 0
             length = len
             left_range = 32
             right_range = 121

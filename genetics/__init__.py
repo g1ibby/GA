@@ -12,3 +12,6 @@ from .mutate import simple_single_point_mutation
 from .mutate import simple_two_point_mutation
 from .mutate import mutation_inversion
 from .mutate import mutation_translocation
+
+from .selectors import tournament
+from .selectors import roulette
